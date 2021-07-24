@@ -35,7 +35,7 @@ public class Main extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		if (this.getServer().getPluginManager().getPlugin("Essentials") == null) {
-			System.out.println("§cОШИБКА§7: §7Essentials не установлен!");
+			System.out.println("В§cРћРЁРР‘РљРђВ§7: В§7Essentials РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅ!");
 			setEnabled(false);
 			return;
 		}
@@ -66,7 +66,7 @@ public class Main extends JavaPlugin {
 		this.manager.initTimer();
 
 		User.updateTimedGroups();
-		Main.clogger.sendMessage(String.valueOf(Util.getMessage("messages.prefix") + " §fПлагин by §6Sneyzi §eуспешно §fзапущен."));
+		Main.clogger.sendMessage(String.valueOf(Util.getMessage("messages.prefix") + " В§fРџР»Р°РіРёРЅ by В§6Sneyzi В§eСѓСЃРїРµС€РЅРѕ В§fР·Р°РїСѓС‰РµРЅ."));
 	}
 	
 	public void onDisable() {
@@ -74,7 +74,7 @@ public class Main extends JavaPlugin {
 			this.manager.end();
 			this.manager = null;
 		}
-		Main.clogger.sendMessage(String.valueOf(Util.getMessage("messages.prefix") + " §fПлагин by §6Sneyzi §eуспешно §fвыключен."));
+		Main.clogger.sendMessage(String.valueOf(Util.getMessage("messages.prefix") + " В§fРџР»Р°РіРёРЅ by В§6Sneyzi В§eСѓСЃРїРµС€РЅРѕ В§fРІС‹РєР»СЋС‡РµРЅ."));
 	}
 
 	public static Main getInstance() {
