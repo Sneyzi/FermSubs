@@ -1,0 +1,11 @@
+name: FermSubs
+author: Sneyzi
+main: ua.sneyzi.fermsubs.Main
+version: 1.0
+softdepend: [Essentials]
+
+commands:
+  subs:
+  fly:
+  god:
+  protect:
