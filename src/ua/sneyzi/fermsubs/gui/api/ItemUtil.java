@@ -27,7 +27,7 @@ public class ItemUtil {
 				StackTraceElement element = stackTrace2[i];
 				stackTrace.add(ChatColor.YELLOW + element.toString());
 			}
-			return createItemStack(Material.BARRIER, "§cТы дура или da?",
+			return createItemStack(Material.BARRIER, "В§cРўС‹ РґСѓСЂР° РёР»Рё da?",
 					(String[]) stackTrace.toArray(new String[stackTrace.size()]));
 		}
 	}
@@ -48,7 +48,7 @@ public class ItemUtil {
 				StackTraceElement element = stackTrace2[i];
 				stackTrace.add(ChatColor.YELLOW + element.toString());
 			}
-			return createItemStack(Material.BARRIER, "§cТы дура или da?",
+			return createItemStack(Material.BARRIER, "В§cРўС‹ РґСѓСЂР° РёР»Рё da?",
 					(String[]) stackTrace.toArray(new String[stackTrace.size()]));
 		}
 	}
@@ -126,7 +126,7 @@ public class ItemUtil {
 				StackTraceElement element = stackTrace2[i];
 				stackTrace.add(ChatColor.YELLOW + element.toString());
 			}
-			return createItemStack(Material.BARRIER, "§cТы дура или da?",
+			return createItemStack(Material.BARRIER, "В§cРўС‹ РґСѓСЂР° РёР»Рё da?",
 					(String[]) stackTrace.toArray(new String[stackTrace.size()]));
 		}
 	}
@@ -153,7 +153,7 @@ public class ItemUtil {
 				StackTraceElement element = stackTrace2[i];
 				stackTrace.add(ChatColor.YELLOW + element.toString());
 			}
-			return createItemStack(Material.BARRIER, "§cТы дура или da?",
+			return createItemStack(Material.BARRIER, "В§cРўС‹ РґСѓСЂР° РёР»Рё da?",
 					(String[]) stackTrace.toArray(new String[stackTrace.size()]));
 		}
 	}
@@ -179,7 +179,7 @@ public class ItemUtil {
 				StackTraceElement element = stackTrace2[i];
 				stackTrace.add(ChatColor.YELLOW + element.toString());
 			}
-			return createItemStack(Material.BARRIER, "§cТы дура или da?",
+			return createItemStack(Material.BARRIER, "В§cРўС‹ РґСѓСЂР° РёР»Рё da?",
 					(String[]) stackTrace.toArray(new String[stackTrace.size()]));
 		}
 	}
@@ -205,7 +205,7 @@ public class ItemUtil {
 				StackTraceElement element = stackTrace2[i];
 				stackTrace.add(ChatColor.YELLOW + element.toString());
 			}
-			return createItemStack(Material.BARRIER, "§cТы дура или da?",
+			return createItemStack(Material.BARRIER, "В§cРўС‹ РґСѓСЂР° РёР»Рё da?",
 					(String[]) stackTrace.toArray(new String[stackTrace.size()]));
 		}
 	}
@@ -226,7 +226,7 @@ public class ItemUtil {
 				StackTraceElement element = stackTrace2[i];
 				stackTrace.add(ChatColor.YELLOW + element.toString());
 			}
-			return createItemStack(Material.BARRIER, "§cТы дура или da?",
+			return createItemStack(Material.BARRIER, "В§cРўС‹ РґСѓСЂР° РёР»Рё da?",
 					(String[]) stackTrace.toArray(new String[stackTrace.size()]));
 		}
 	}
@@ -252,7 +252,7 @@ public class ItemUtil {
 				StackTraceElement element = stackTrace2[i];
 				stackTrace.add(ChatColor.YELLOW + element.toString());
 			}
-			return createItemStack(Material.BARRIER, "§cТы дура или da?",
+			return createItemStack(Material.BARRIER, "В§cРўС‹ РґСѓСЂР° РёР»Рё da?",
 					(String[]) stackTrace.toArray(new String[stackTrace.size()]));
 		}
 	}	
@@ -268,7 +268,7 @@ public class ItemUtil {
 				StackTraceElement element = stackTrace2[i];
 				stackTrace.add(ChatColor.YELLOW + element.toString());
 			}
-			return createItemStack(Material.BARRIER, "§cТы дура или da?",
+			return createItemStack(Material.BARRIER, "В§cРўС‹ РґСѓСЂР° РёР»Рё da?",
 					(String[]) stackTrace.toArray(new String[stackTrace.size()]));
 		}
 	}
@@ -289,7 +289,7 @@ public class ItemUtil {
 		public Builder() {
 			this.itemStack = new ItemStack(Material.BARRIER, 1);
 			ItemMeta meta = this.itemStack.getItemMeta();
-			meta.setDisplayName("§cПредмет не создан!");
+			meta.setDisplayName("В§cРџСЂРµРґРјРµС‚ РЅРµ СЃРѕР·РґР°РЅ!");
 			this.itemStack.setItemMeta(meta);
 			this.lores = new ArrayList<String>();
 		}
@@ -320,18 +320,18 @@ public class ItemUtil {
 		public Builder setDisplayName(String s) {
 			if (this.itemStack.getType() != Material.SKULL_ITEM || this.itemStack.getType() != Material.SKULL) {
 				ItemMeta meta = this.itemStack.getItemMeta();
-				meta.setDisplayName(s.replace("&", "§"));
+				meta.setDisplayName(s.replace("&", "В§"));
 				this.itemStack.setItemMeta(meta);
 			} else {
 				SkullMeta meta2 = (SkullMeta) this.itemStack.getItemMeta();
-				meta2.setDisplayName(s.replace("&", "§"));
+				meta2.setDisplayName(s.replace("&", "В§"));
 				this.itemStack.setItemMeta((ItemMeta) meta2);
 			}
 			return this;
 		}
 
 		public Builder addLore(String lore) {
-			this.lores.add(lore.replace("&", "§"));
+			this.lores.add(lore.replace("&", "В§"));
 			if (this.itemStack.getType() != Material.SKULL_ITEM || this.itemStack.getType() != Material.SKULL) {
 				ItemMeta meta = this.itemStack.getItemMeta();
 				meta.setLore((List) this.lores);
@@ -359,7 +359,7 @@ public class ItemUtil {
 
 		public Builder setLores(String... lores) {
 			for (String s : lores) {
-				this.lores.add(s.replace("&", "§"));
+				this.lores.add(s.replace("&", "В§"));
 			}
 			if (this.itemStack.getType() != Material.SKULL_ITEM || this.itemStack.getType() != Material.SKULL) {
 				ItemMeta meta = this.itemStack.getItemMeta();
@@ -395,7 +395,7 @@ public class ItemUtil {
 					StackTraceElement element = stackTrace2[i];
 					stackTrace.add(ChatColor.YELLOW + element.toString());
 				}
-				return ItemUtil.createItemStack(Material.BARRIER, "§cТы дура или da?",
+				return ItemUtil.createItemStack(Material.BARRIER, "В§cРўС‹ РґСѓСЂР° РёР»Рё da?",
 						(String[]) stackTrace.toArray(new String[stackTrace.size()]));
 			}
 		}
