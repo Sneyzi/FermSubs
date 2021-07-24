@@ -19,7 +19,7 @@ public class Util {
 
 	public static String getMessage(String path) {
 		if (getString(path) == null) {
-			return "ßcError: path " + path + " not found.";
+			return "¬ßcError: path " + path + " not found.";
 		}
 		return ChatColor.translateAlternateColorCodes('&', getString(path));
 	}
@@ -31,20 +31,20 @@ public class Util {
 		int s = time % 60;
 
 		if (time > 60 && time < 3600) {
-			return m + "Ï";
+			return m + "–º";
 		}
 		if (time >= 3600 && time < 86400) {
-			return h + "˜ " + m + "Ï";
+			return h + "—á " + m + "–º";
 		}
 		if (time >= 86400) {
-			return d + "‰ " + h + "˜ " + m + "Ï";
+			return d + "–¥ " + h + "—á " + m + "–º";
 		}
 
-		return s + "Ò";
+		return s + "—Å";
 	}
 	
 	public static String formatTime(String timeStr) {
-		return timeStr.replace("y", "„").replace("d", "‰").replace("h", "˜").replace("m", "Ï").replace("m", "Ò");
+		return timeStr.replace("y", "–≥").replace("d", "–¥").replace("h", "—á").replace("m", "–º").replace("m", "—Å");
 	}
    
 	public static boolean checkFormat(String timeStr) {
